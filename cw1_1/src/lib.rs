@@ -34,10 +34,8 @@ impl BankAccount {
     }
     pub fn summarise(&mut self) -> String {
         /*
-         * Borrows str from caller and returns a single line string describing the account.
-         * Uses formatting where {0} represents the account number class variable
-         * as a decimal, {1} represents sortcode class variable as a string,
-         * and {2:.2} represents the balance class variable to two decial places.
+         * Returns sortcode variable as a string.
+         * {2:.2} represents the balance variable to two decial places.
          */
 
         format!(
