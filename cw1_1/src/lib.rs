@@ -34,7 +34,7 @@ impl BankAccount {
     }
     pub fn summarise(&mut self) -> String {
         /*
-         * Returns sortcode variable as a string.
+         * Returns summary of the bank account as a string.
          * {2:.2} represents the balance variable to two decial places.
          */
 
@@ -58,12 +58,11 @@ impl BankAccount {
         self.sortcode = s;
     }
     pub fn get_balance(&mut self) -> f32 {
-        // Returns current account balance as an string to two decimal places
-        // using class variable balance.
+        // Returns current account balance as an float using class variable balance.
         self.balance
     }
     pub fn get_account_number(&mut self) -> u32 {
-        // Returns the account number as a float using the class variable accountNumber.
+        // Returns the account number as a integer using the class variable accountNumber.
         self.account_number
     }
     pub fn get_sortcode(&mut self) -> String {
