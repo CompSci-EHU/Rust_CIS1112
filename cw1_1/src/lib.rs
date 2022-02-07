@@ -40,7 +40,9 @@ impl BankAccount {
 
         format!(
             "Acc. Num: {0} Sort:{1} Balance: ${2:.2}",
-            self.account_number, self.sortcode, self.balance,
+            self.get_account_number(),
+            self.get_sortcode(),
+            self.get_balance(),
         )
     }
     pub fn set_balance(&mut self, f: f32) {
@@ -55,17 +57,17 @@ impl BankAccount {
         // Sets the value of the class variable sortcode to s <string>.
         self.sortcode = s;
     }
-    pub fn get_balance(&mut self) -> String {
+    pub fn get_balance(&mut self) -> f32 {
         // Returns current account balance as an string to two decimal places
         // using class variable balance.
-        format!("{0:.2}", self.balance)
+        self.balance
     }
-    pub fn get_account_number(&mut self) -> String {
+    pub fn get_account_number(&mut self) -> u32 {
         // Returns the account number as a float using the class variable accountNumber.
-        self.account_number.to_string()
+        self.account_number
     }
     pub fn get_sortcode(&mut self) -> String {
         // Returns the sort code as a sting using the class variable sortcode.
-        self.sortcode.to_string()
+        self.sortcode.to_owned()
     }
 }
